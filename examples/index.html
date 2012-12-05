@@ -8,7 +8,9 @@
 </style>
 <body>
 
-  <p>MOUSETIP</p>
+  <p>MOUSETIP <span id="power">OFF</span></p>
+
+  <button id="toggle">Toggle Mousetip</button>
 
   <div id="container"></div>
 
@@ -65,16 +67,29 @@
 
     // binding the tooltip toggle to a combination
     Mousetip.bindKey("ctrl+t", "Toggle mousetip", function(e, combo) {
-      Mousetip.toggle(function(power) {
-        if (!power)
-          MousetipUI.off();
-      });
+      toggleMousetip();
     });
 
     // binding the tooltip output to the UI library
     // you can use any tooltip library you'd like
     Mousetip.bindTooltip(function(shortcuts, e) {
       MousetipUI.tip(shortcuts);
+    });
+
+    var toggleMousetip = function() {
+      Mousetip.toggle(function(power) {
+        var switchText = power ? "ON" : "OFF";
+        if (!power)
+          MousetipUI.off();
+        
+        $("#power").text(switchText);
+      });
+    };
+
+    $(function() {
+      $("#toggle").click(function(e) {
+        toggleMousetip();
+      });
     });
 
   </script>
