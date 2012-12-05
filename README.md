@@ -66,12 +66,12 @@ The css is included in ./examples/css/mousetip.css
     });
 
     // alt key example
-    Mousetip.bindKey("meta+alt+.", "harharhar", function(e, combo) {
+    Mousetip.bindKey("meta+alt+.", "Change background color to blue", function(e, combo) {
       $('body').css('background-color', 'blue');
     });
 
     // option key example
-    Mousetip.bindKey("meta+option+2", "harharhar", function(e, combo) {
+    Mousetip.bindKey("meta+option+2", "Change background color to green", function(e, combo) {
       $('body').css('background-color', 'green');
     });
 
