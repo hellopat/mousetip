@@ -96,12 +96,12 @@ Well I haven't found one that does something similar, so it's pretty unique in t
 
 ## TODO
 
-Support for sequences
-Better click support
-Fix known bugs
-Tests
-Documentation
-Project Page
+* Support for sequences
+* Better click support
+* Fix known bugs
+* Tests
+* Documentation
+* Project Page
 
 ## Documentation
 
