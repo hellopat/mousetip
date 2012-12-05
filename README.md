@@ -15,7 +15,7 @@ http://hellopat.github.com/mousetip/examples/
 
 ## Getting started
 
-1.  Head over to http://craig.is/killing/mice and check out the documentation
+1.  Head over to http://craig.is/killing/mice and check out the documentation for Mousetrap
 
 2.  Include mousetip on your page before the closing ``</body>`` tag
 
