@@ -51,17 +51,17 @@
     });
 
     // alt key example
-    Mousetip.bindKey("meta+alt+.", "harharhar", function(e, combo) {
+    Mousetip.bindKey("meta+alt+.", "Change background color to blue", function(e, combo) {
       $('body').css('background-color', 'blue');
     });
 
     // option key example
-    Mousetip.bindKey("meta+option+2", "harharhar", function(e, combo) {
+    Mousetip.bindKey("meta+option+2", "Change background color to green", function(e, combo) {
       $('body').css('background-color', 'green');
     });
 
     // invalid binding
-    Mousetip.bindKey("ctrl+M", "If you'd like to bind an uppercase letter, you can only do it with a shift+lowercase when there is a modifier involved", function(e, combo) {
+    Mousetip.bindKey("ctrl+M", "If you'd like to bind an uppercase letter, you can only do it with a shift+lowercase when there is no modifier involved", function(e, combo) {
       console.log("This will never execute");
     });
 
