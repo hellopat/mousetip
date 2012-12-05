@@ -1,11 +1,17 @@
 # Mousetip
 
-Mousetip is a tooltip layer for keyboard shortcuts built on top of the Mousetrap library.
+Mousetip is a tooltip layer for keyboard shortcuts built on top of the Mousetrap library built by @ccampbell.
+
+Check out the repository here https://github.com/ccampbell/mousetrap
 
 A weekend project that was a proof of concept.  There are quite a few things that need to
 be worked out, however it's been heavily 'used' in the latest versions of Chrome and Firefox
 on a Mac.  I still haven't tried it in Windows and IE, but when I get access to a Windows PC
 I'll be sure to begin fixing bugs that creep up.
+
+## Example
+
+http://hellopat.github.com/mousetip/examples/
 
 ## Getting started
 
@@ -17,7 +23,14 @@ I'll be sure to begin fixing bugs that creep up.
     <script src="/path/to/mousetip.js"></script>
     ```
 
-3.  Add some keyboard events to listen for and add a description for the action
+3.  If you're using the built in UI library, including the following after ``mousetip.js``.
+The css is included in ./examples/css/mousetip.css
+
+    ```html
+    <script src="path/to/mousetip.ui.js"></script>
+    ```
+
+4.  Add some keyboard events to listen for and add a description for the action
 
     ```html
     <script>
