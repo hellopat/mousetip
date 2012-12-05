@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<link href="../stylesheets/mousetip.css" rel="stylesheet">
+<style type="text/css">
+  body {
+    font-family: helvetica;
+  }
+</style>
+<body>
+
+  <p>MOUSETIP <span id="power">OFF</span></p>
+
+  <button id="toggle">Toggle Mousetip</button>
+
+  <div id="container"></div>
+
+  <script src="../javascripts/jquery.min.js"></script>
+  <script src="../javascripts/mousetrap.js"></script>
+  <script src="../javascripts/mousetip.js"></script>
+  <script src="../javascripts/mousetip.ui.js"></script>
+  <script>
+      
+    // single key example
+    Mousetip.bindKey("a", "Change background color to yellow", function(e, combo) {
+      $('body').css('background-color', 'yellow');
+    });
+
+    // shift + single key example bound to uppercase value
+    Mousetip.bindKey("A", "Insert the text 'hello world' into div", function(e, combo) {
+      $("#container").text("hello world");
+    });
+
+    // meta key example
+    Mousetip.bindKey("meta+shift+e", "Change background color to red", function(e, combo) {
+      $('body').css('background-color', 'red');
+    });
+
+    // another meta key example with longer description
+    Mousetip.bindKey("meta+shift+v", "You can only bind one non-modifier key when the meta key is part of the combination.", function(e, combo) {
+      $("#container").text(combo);
+    });
+
+    // taking focus away from the window with an alert message
+    Mousetip.bindKey("ctrl+k+v", "Alert message", function() {
+      alert("Alert message"); 
+    });
+
+    // simple console message
+    Mousetip.bindKey("ctrl+i", "Console message", function(e, combo) {
+      console.log(combo);
+    });
+
+    // alt key example
+    Mousetip.bindKey("meta+alt+.", "harharhar", function(e, combo) {
+      $('body').css('background-color', 'blue');
+    });
+
+    // option key example
+    Mousetip.bindKey("meta+option+2", "harharhar", function(e, combo) {
+      $('body').css('background-color', 'green');
+    });
+
+    // invalid binding
+    Mousetip.bindKey("ctrl+M", "If you'd like to bind an uppercase letter, you can only do it with a shift+lowercase when there is a modifier involved", function(e, combo) {
+      console.log("This will never execute");
+    });
+
+    // binding the tooltip toggle to a combination
+    Mousetip.bindKey("ctrl+t", "Toggle mousetip", function(e, combo) {
+      toggleMousetip();
+    });
+
+    // binding the tooltip output to the UI library
+    // you can use any tooltip library you'd like
+    Mousetip.bindTooltip(function(shortcuts, e) {
+      MousetipUI.tip(shortcuts);
+    });
+
+    var toggleMousetip = function() {
+      Mousetip.toggle(function(power) {
+        var switchText = power ? "ON" : "OFF";
+        if (!power)
+          MousetipUI.off();
+        
+        $("#power").text(switchText);
+      });
+    };
+
+    $(function() {
+      $("#toggle").click(function(e) {
+        toggleMousetip();
+      });
+    });
+
+  </script>
+
+</body>
