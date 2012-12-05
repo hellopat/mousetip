@@ -1,6 +1,6 @@
 # Mousetip
 
-Mousetip is a tooltip layer for keyboard shortcuts built on top of the Mousetrap library built by @ccampbell.
+Mousetip is a tooltip layer for keyboard shortcuts built on top of the Mousetrap library by @ccampbell.
 
 Check out the repository here https://github.com/ccampbell/mousetrap
 
@@ -17,7 +17,7 @@ http://hellopat.github.com/mousetip/examples/
 
 1.  Head over to http://craig.is/killing/mice and check out the documentation for Mousetrap
 
-2.  Include mousetip on your page before the closing ``</body>`` tag
+2.  Include Mousetip on your page before the closing ``</body>`` tag
 
     ```html
     <script src="/path/to/mousetip.js"></script>
