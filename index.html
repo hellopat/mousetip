@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Mousetip by hellopat</title>
 
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/mousetip.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -16,7 +18,7 @@
     <div class="wrapper">
       <header>
         <h1>Mousetip</h1>
-        <p>A tooltip layer for keyboard shortcuts built on top of the Mousetrap library.</p>
+        <p>Dynamic Keyboard Shortcut Tooltips</p>
 
         <p class="view"><a href="https://github.com/hellopat/mousetip">View the Project on GitHub <small>hellopat/mousetip</small></a></p>
 
@@ -28,7 +30,43 @@
         </ul>
       </header>
       <section>
-        <h1>mousetip</h1>
+        <h1>What is Mousetip?</h1>
+        <p>Mousetip is a tooltip layer for keyboard shortcuts built on top of the Mousetrap library.  
+          It provides a simple way for binding keyboard shortcuts and dynamically displaying tooltips for applications that heavily rely on them.</p>
+
+        <h1>Why use it?</h1>
+        <p>If your application has a separate page for explaining keyboard shortcuts, then Mousetip 
+          is the perfect fit!  Even if you have just a few keyboard shortcuts in your application, it's
+          easy to provide the user with non-intrusive, dynamic tooltips for them.</p>
+
+        <h1>Can I see some examples?</h1>
+        <p>Surely!</p>
+        <p>Press the toggle button below to turn Mousetip on / off (alternatively you can use the shortcut
+          ctrl+t)</p>
+        <button class="tipButton" id="toggle">Mousetip <span id="power">OFF</span></button>
+        <p>The following shortcuts are bound, each to a different action:</p>
+        <pre>a
+A (shift+a)
+shift+l
+E
+meta+e
+meta+shift+e
+meta+shift+v
+meta+alt+.
+meta+option+2
+meta+z
+meta+f
+ctrl+k+v
+ctrl+0
+ctrl+M
+ctrl+t</pre>
+
+      <h1>How do I add Mousetip to my application?</h1>
+        <p>Simple!</p>
+        <pre>&lt;script src=&quot;/path/to/mousetrap.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/path/to/mousetip.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/path/to/mousetip.ui.js&quot;&gt;&lt;/script&gt;</pre>
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/hellopat">hellopat</a></p>
@@ -36,6 +74,12 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="javascripts/jquery.bootstrap.growl.js"></script>
+    <script src="javascripts/mousetrap.js"></script>
+    <script src="javascripts/mousetip.js"></script>
+    <script src="javascripts/mousetip.ui.js"></script>
+    <script src="javascripts/examples.js"></script>
   </body>
 </html>
