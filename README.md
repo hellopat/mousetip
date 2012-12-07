@@ -11,7 +11,7 @@ I'll be sure to begin fixing bugs that creep up.
 
 ## Example
 
-http://hellopat.github.com/mousetip/examples/
+http://hellopat.github.com/mousetip/
 
 ## Getting started
 
