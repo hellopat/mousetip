@@ -86,9 +86,8 @@ var toggleMousetip = function() {
   Mousetip.toggle(function(power) {
     var switchText = power ? "ON" : "OFF",
         alertType = power ? "success" : "error";
-    if (!power) {
-      MousetipUI.off();
-    }
+
+    MousetipUI.toggle(power);
 
     $.bootstrapGrowl("Mousetip " + switchText, alertType);
     $("#power").text(switchText);
