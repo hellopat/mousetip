@@ -237,14 +237,21 @@
   MousetipUI = {
 
     /**
+     * On / Off flag
+     */
+    power: false,
+
+    /**
      * Displays the tooltips
      * This function accepts an array of shortcuts for display
      *
      * @return void
      */
     tip: function(shortcuts) {
-      _createContainer();
-      _filterTips(shortcuts);
+      if (this.power) {
+        _createContainer();
+        _filterTips(shortcuts);
+      }
     },
     
     /**
@@ -253,7 +260,25 @@
      * @return void
      */
     off: function() {
-      this.tip([]);
+      this.power = false;
+    },
+
+    /**
+     * Turns the tooltips on
+     *
+     * @return void
+     */
+    on: function() {
+      this.power = true;
+    },
+
+    /**
+     * Toggles tooltips on / off
+     *
+     * @return void
+     */
+    toggle: function(power) {
+      this.power = power
     }
 
   };

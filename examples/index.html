@@ -81,8 +81,7 @@
     var toggleMousetip = function() {
       Mousetip.toggle(function(power) {
         var switchText = power ? "ON" : "OFF";
-        if (!power)
-          MousetipUI.off();
+        MousetipUI.toggle(power);
         
         $("#power").text(switchText);
       });
