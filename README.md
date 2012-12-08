@@ -83,8 +83,7 @@ The css is included in ./examples/css/mousetip.css
     // binding the tooltip toggle to a combination
     Mousetip.bindKey("ctrl+t", "Toggle mousetip", function(e, combo) {
       Mousetip.toggle(function(power) {
-        if (!power)
-          MousetipUI.off();
+        MousetipUI.toggle(power);
       });
     });
 
