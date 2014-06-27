@@ -357,11 +357,9 @@ if (!Array.prototype.indexOf) {
    * @return void
    */
   _mapSingle = function(shortcut, description) {
-    var i,
-        type,
+    var type,
         keys,
-        unmodifiedShortcut,
-        assembleKeys = [];
+        unmodifiedShortcut = [];
 
     // Save an unmodified version of the shortcut
     unmodifiedShortcut = shortcut;
@@ -379,7 +377,7 @@ if (!Array.prototype.indexOf) {
     // and convert to shift + letter (can't do this for
     // combos bound to other modifiers)
     if (keys.length == 1) {
-      _convertUppercaseToShift(keys)
+      _convertUppercaseToShift(keys);
       if (type == "combination") {
         shortcut = keys.join("+");
       } else {
